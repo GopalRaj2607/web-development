@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-text {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  color: white;
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.banner-text button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  background-color: #e50914;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.thumbnails {
+  padding: 20px;
+}
+
+.thumbnail-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.thumbnail-row img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
